@@ -49,6 +49,10 @@ Now make sure to update the following files:
 - Some nuxt modules already installed
 - Added `unocss` with `attributify` mode.
 
+## Other templates
+
+- [Vue 3 Nimiq Template](https://github.com/onmax/nimiq-vue-template)
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar).
