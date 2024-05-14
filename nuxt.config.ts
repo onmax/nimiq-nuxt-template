@@ -20,6 +20,8 @@ export default defineNuxtConfig({
     typedPages: true,
   },
 
+  ssr: false,
+
   vite: {
     plugins: [
       wasm(),

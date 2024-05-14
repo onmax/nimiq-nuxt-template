@@ -40,6 +40,8 @@ Now make sure to update the following files:
 - `package.json`: Update the `name`, `version`, `description`, `author`, `repository`, `bugs`, and `homepage` fields.
 - `vite.config.ts`: Update the `base` field to match your repository name or custom domain.
 
+> the whole is not SSR since Nimiq Web Client is suppose to run in the client. You can modify this behaviour as you want and create islands
+
 ## Features
 
 - Includes `@nimiq/core@next` and connects to the Nimiq Albatross Testnet.
