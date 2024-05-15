@@ -67,5 +67,9 @@ export default defineNuxtConfig({
     config: {
       standalone: false,
     },
-  },
+  },  
+
+  colorMode: {
+    classSuffix: '',
+  }
 })
