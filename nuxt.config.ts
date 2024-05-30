@@ -3,14 +3,28 @@ import topLevelAwait from "vite-plugin-top-level-await";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  ssr: false,
   modules: [
     "@vueuse/nuxt",
     "@pinia/nuxt",
     "@unocss/nuxt",
     "@nuxtjs/color-mode",
+    "@nuxthub/core",
     "@nuxt/eslint",
+    "@nuxt/image"
   ],
+
+  hub: {
+    // NuxtHub options. See https://hub.nuxt.com/docs/getting-started/installation
+  },
+
+  devtools: {
+    enabled: true
+  },
+
+  colorMode: {
+    classSuffix: "",
+  },
 
   experimental: {
     // when using generate, payload js assets included in sw precache manifest
@@ -20,7 +34,6 @@ export default defineNuxtConfig({
     typedPages: true,
   },
 
-  ssr: false,
 
   vite: {
     plugins: [
@@ -64,6 +77,7 @@ export default defineNuxtConfig({
   },
 
   eslint: {
+    checker: true,
     config: {
       standalone: false,
     },

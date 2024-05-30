@@ -1,8 +1,18 @@
 <script setup lang="ts">
 const { consensus, head } = storeToRefs(useNimiqNetwork())
+
+const { share } = useShare()
+function startShare() {
+  share({
+    title: 'Hello',
+    text: 'Hello my friend!',
+    url: location.href,
+  })
+}
 </script>
 
 <template>
+  <!-- eslint-disable vue/no-multiple-template-root -->
   <WelcomeItem icon="i-nimiq:icons-lg-browsermesh">
     <template #heading>
       Documentation
@@ -10,7 +20,8 @@ const { consensus, head } = storeToRefs(useNimiqNetwork())
 
     <p class="text-neutral-800">
       Nimiq's
-      <a href="https://onmax.github.io/nimiq-developer-center/" target="_blank" rel="noopener">official documentation</a>
+      <a href="https://onmax.github.io/nimiq-developer-center/" target="_blank" rel="noopener">official
+        documentation</a>
       provides you with all information you need to get started.
     </p>
   </WelcomeItem>
@@ -22,7 +33,7 @@ const { consensus, head } = storeToRefs(useNimiqNetwork())
 
     <div>
       <div flex="~ gap-12">
-        <span ghost-btn capitalize flex="~ gap-4" w-max>
+        <span flex="~ gap-4" w-max capitalize ghost-btn>
           <div v-if="consensus !== 'established'" i-nimiq:spinner />
           {{ consensus }}
         </span>
@@ -30,7 +41,11 @@ const { consensus, head } = storeToRefs(useNimiqNetwork())
       </div>
 
       <p class="text-neutral-800" mt-12>
-        Ready to connect to the network. You can check the <a href="https://onmax.github.io/nimiq-developer-center/build/web-client/index" target="_blank" rel="noopener">web client</a> to see the network in action.
+        Ready to connect to the network. You can check the <a
+          href="https://onmax.github.io/nimiq-developer-center/build/web-client/index" target="_blank"
+          rel="noopener"
+        >web
+          client</a> to see the network in action.
       </p>
     </div>
   </WelcomeItem>
@@ -41,9 +56,11 @@ const { consensus, head } = storeToRefs(useNimiqNetwork())
     </template>
 
     <p class="text-neutral-800">
-      Preinstalled with <a href="https://onmax.github.io/nimiq-ui/" target="_blank" rel="noopener">Nimiq CSS</a> and Nimiq Icons. For example using <code>
+      Preinstalled with <a href="https://onmax.github.io/nimiq-ui/" target="_blank" rel="noopener">Nimiq CSS</a> and
+      Nimiq
+      Icons. For example using <code>
         &lt;div class="i-nimiq:spinner"&gt;&lt;/div&gt;
-      </code>  will render <span class="i-nimiq:spinner" inline-block />
+      </code> will render <span class="i-nimiq:spinner" inline-block />
     </p>
   </WelcomeItem>
 
@@ -56,4 +73,8 @@ const { consensus, head } = storeToRefs(useNimiqNetwork())
       If you have any questions, feel free to ask in GitHub, Telegram group or Nimiq Discord.
     </p>
   </WelcomeItem>
+
+  <button mx-auto mt-32 pill-lg pill-blue @click="startShare">
+    Share it
+  </button>
 </template>
