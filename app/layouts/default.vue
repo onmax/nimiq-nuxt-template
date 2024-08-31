@@ -26,14 +26,14 @@ const toggleDark = () => colorMode.value = colorMode.value === 'light' ? 'dark' 
       </p>
 
       <nav flex="~ gap-32 wrap" mt-12>
-        <NuxtLink to="/" arrow>
+        <NuxtLink to="/" nq-arrow>
           Home
         </NuxtLink>
-        <NuxtLink to="/about" arrow>
+        <NuxtLink to="/about" nq-arrow>
           About
         </NuxtLink>
 
-        <button pill-sm ml-auto pill-blue @click="() => toggleDark()">
+        <button nq-pill-sm ml-auto nq-pill-blue @click="() => toggleDark()">
           Change theme
         </button>
       </nav>

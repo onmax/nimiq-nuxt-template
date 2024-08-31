@@ -33,11 +33,11 @@ function startShare() {
 
     <div>
       <div flex="~ gap-12">
-        <span flex="~ gap-4" w-max capitalize ghost-btn>
+        <span flex="~ gap-4" w-max capitalize nq-ghost-btn>
           <div v-if="consensus !== 'established'" i-nimiq:spinner />
           {{ consensus }}
         </span>
-        <span v-if="head" ghost-btn>{{ head?.slice(0, 8) }}...{{ head?.slice(-8) }}</span>
+        <span v-if="head" nq-ghost-btn>{{ head?.slice(0, 8) }}...{{ head?.slice(-8) }}</span>
       </div>
 
       <p class="text-neutral-800" mt-12>
@@ -74,7 +74,7 @@ function startShare() {
     </p>
   </WelcomeItem>
 
-  <button mx-auto mt-32 pill-lg pill-blue @click="startShare">
+  <button mx-auto mt-32 nq-pill-lg nq-pill-blue @click="startShare">
     Share it
   </button>
 </template>

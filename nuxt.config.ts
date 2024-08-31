@@ -1,17 +1,23 @@
-import wasm from "vite-plugin-wasm";
-import topLevelAwait from "vite-plugin-top-level-await";
+import wasm from 'vite-plugin-wasm'
+import topLevelAwait from 'vite-plugin-top-level-await'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  compatibilityDate: '2024-08-31',
+
   ssr: false,
   modules: [
-    "@vueuse/nuxt",
-    "@pinia/nuxt",
-    "@unocss/nuxt",
-    "@nuxtjs/color-mode",
-    "@nuxthub/core",
-    "@nuxt/eslint",
-    "@nuxt/image"
+    '@vueuse/nuxt',
+    '@pinia/nuxt',
+    '@unocss/nuxt',
+    '@nuxtjs/color-mode',
+    '@nuxthub/core',
+    '@nuxt/eslint',
+    '@nuxt/image',
   ],
 
   hub: {
@@ -19,11 +25,11 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true
+    enabled: true,
   },
 
   colorMode: {
-    classSuffix: "",
+    classSuffix: '',
   },
 
   experimental: {
@@ -34,15 +40,14 @@ export default defineNuxtConfig({
     typedPages: true,
   },
 
-
   vite: {
     plugins: [
       wasm(),
       topLevelAwait(),
     ],
     optimizeDeps: {
-      exclude: ['@nimiq/core-web'],
-    }
+      exclude: ['@nimiq/core'],
+    },
   },
 
   nitro: {
@@ -80,9 +85,5 @@ export default defineNuxtConfig({
     config: {
       standalone: false,
     },
-  },  
-
-  colorMode: {
-    classSuffix: '',
-  }
+  },
 })
