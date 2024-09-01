@@ -9,7 +9,6 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-08-31',
 
-  ssr: false,
   modules: [
     '@vueuse/nuxt',
     '@pinia/nuxt',
