@@ -17,10 +17,18 @@ export default defineNuxtConfig({
     '@nuxthub/core',
     '@nuxt/eslint',
     '@nuxt/image',
+    '@nuxtjs/seo',
   ],
 
   hub: {
     // NuxtHub options. See https://hub.nuxt.com/docs/getting-started/installation
+  },
+
+  site: {
+    url: 'https://nimiq-nuxt-template.nuxt.dev/',
+    name: 'Nimiq Nuxt Template',
+    description: 'Welcome to Nimiq Nuxt Template site!',
+    defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
   },
 
   devtools: {

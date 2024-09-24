@@ -9,6 +9,8 @@ function startShare() {
     url: location.href,
   })
 }
+
+defineOgImage({ url: '/public/sharing-banner.png' })
 </script>
 
 <template>
