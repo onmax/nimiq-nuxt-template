@@ -10,7 +10,7 @@ function startShare() {
   })
 }
 
-defineOgImage({ url: '/public/sharing-banner.png' })
+defineOgImage({ url: '/sharing-banner.png' })
 </script>
 
 <template>
