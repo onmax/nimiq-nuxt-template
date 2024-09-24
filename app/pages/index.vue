@@ -10,7 +10,7 @@ function startShare() {
   })
 }
 
-defineOgImage({ url: '/sharing-banner-dark.png' })
+defineOgImage({ url: '/sharing-banner-dark.webp' })
 </script>
 
 <template>
